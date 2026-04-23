@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Muzammil Modan — Senior Android & Flutter Developer | Freelance Mobile Expert</title>
+<meta name="description" content="Hire Muzammil Modan — 10+ years experience. Android (Java/Kotlin) & Flutter expert. OTT, Fintech, Healthcare, Social. 40+ production apps worldwide." />
+<meta name="keywords" content="Android Developer, Flutter Developer, Kotlin, Dart, OTT App Developer, ExoPlayer, Firebase, Freelance Mobile App Developer India" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#07090f;--bg2:#0d1120;
+  --glass:rgba(255,255,255,0.04);--glass-border:rgba(255,255,255,0.08);--glass-hover:rgba(255,255,255,0.07);
+  --blue:#3b82f6;--blue-bright:#60a5fa;--cyan:#22d3ee;--gold:#f59e0b;--gold-light:#fbbf24;
+  --text:#f1f5f9;--text-muted:#8892a4;--text-dim:#4b5563;
+  --accent-glow:rgba(59,130,246,0.3);--cyan-glow:rgba(34,211,238,0.2);--gold-glow:rgba(245,158,11,0.2);
+  --radius:16px;--radius-lg:24px;--transition:0.35s cubic-bezier(0.4,0,0.2,1);
+  --font-display:'Syne',sans-serif;--font-body:'DM Sans',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.4}
+.grid-bg{position:fixed;inset:0;background-image:linear-gradient(rgba(59,130,246,0.04)1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,0.04)1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--blue);border-radius:2px}
+
+/* NAV */
+#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5%;height:72px;display:flex;align-items:center;justify-content:space-between;transition:background var(--transition),box-shadow var(--transition)}
+#navbar.scrolled{background:rgba(7,9,15,0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--glass-border);box-shadow:0 4px 40px rgba(0,0,0,.4)}
+.nav-logo{font-family:var(--font-display);font-size:1.25rem;font-weight:800;letter-spacing:-.02em;color:var(--text);text-decoration:none}
+.nav-logo span{color:var(--blue)}
+.nav-links{display:flex;align-items:center;gap:1.75rem;list-style:none}
+.nav-links a{color:var(--text-muted);text-decoration:none;font-size:.875rem;font-weight:500;transition:color var(--transition)}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{padding:.5rem 1.25rem;background:var(--blue);color:#fff!important;border-radius:8px;font-weight:600!important;transition:all var(--transition)!important}
+.nav-cta:hover{background:var(--blue-bright)!important;transform:translateY(-1px);box-shadow:0 4px 20px rgba(59,130,246,.4)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px}
+.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(7,9,15,.97);backdrop-filter:blur(30px);border-bottom:1px solid var(--glass-border);padding:1.5rem 5%;flex-direction:column;gap:1rem;z-index:999}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:var(--text-muted);text-decoration:none;font-size:1rem;font-weight:500;padding:.5rem 0;border-bottom:1px solid var(--glass-border);transition:color var(--transition)}
+.mobile-menu a:hover{color:var(--text)}
+
+/* HERO */
+section{position:relative;z-index:1}
+#hero{min-height:100vh;display:flex;align-items:center;padding:120px 5% 80px;overflow:hidden}
+.hero-glow-1{position:absolute;width:600px;height:600px;top:-100px;left:-100px;background:radial-gradient(circle,rgba(59,130,246,.12)0%,transparent 70%);pointer-events:none;animation:floatGlow 8s ease-in-out infinite}
+.hero-glow-2{position:absolute;width:500px;height:500px;bottom:0;right:0;background:radial-gradient(circle,rgba(34,211,238,.08)0%,transparent 70%);pointer-events:none;animation:floatGlow 10s ease-in-out infinite reverse}
+@keyframes floatGlow{0%,100%{transform:translate(0,0)scale(1)}50%{transform:translate(30px,-30px)scale(1.05)}}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:1200px;margin:0 auto;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.25);border-radius:100px;font-size:.8rem;font-weight:500;color:var(--blue-bright);margin-bottom:1.5rem;letter-spacing:.03em}
+.hero-badge::before{content:'';width:7px;height:7px;background:var(--cyan);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.7)}}
+.hero-title{font-family:var(--font-display);font-size:clamp(2.2rem,4.5vw,3.8rem);font-weight:800;line-height:1.1;letter-spacing:-.03em;margin-bottom:1.5rem}
+.gradient-text{background:linear-gradient(135deg,var(--blue-bright)0%,var(--cyan)60%,var(--gold-light)100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:1.05rem;color:var(--text-muted);line-height:1.75;max-width:480px;margin-bottom:2.5rem;font-weight:300}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:3rem}
+.btn-primary{padding:.875rem 2rem;background:var(--blue);color:#fff;border:none;border-radius:10px;font-family:var(--font-body);font-size:.95rem;font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all var(--transition);box-shadow:0 0 30px rgba(59,130,246,.3)}
+.btn-primary:hover{background:var(--blue-bright);transform:translateY(-2px);box-shadow:0 8px 30px rgba(59,130,246,.5)}
+.btn-secondary{padding:.875rem 2rem;background:var(--glass);color:var(--text);border:1px solid var(--glass-border);border-radius:10px;font-family:var(--font-body);font-size:.95rem;font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all var(--transition)}
+.btn-secondary:hover{background:var(--glass-hover);border-color:var(--blue);transform:translateY(-2px)}
+.btn-whatsapp{padding:.875rem 2rem;background:rgba(37,211,102,.12);color:#25d366;border:1px solid rgba(37,211,102,.3);border-radius:10px;font-family:var(--font-body);font-size:.95rem;font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all var(--transition)}
+.btn-whatsapp:hover{background:rgba(37,211,102,.2);transform:translateY(-2px)}
+.trust-badges{display:flex;flex-wrap:wrap;gap:.75rem}
+.badge-item{display:flex;align-items:center;gap:6px;padding:5px 12px;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;font-size:.78rem;font-weight:500;color:var(--text-muted)}
+.badge-item .dot{color:var(--gold)}
+
+/* avatar */
+.hero-visual{display:flex;justify-content:center;align-items:center}
+.avatar-wrap{position:relative;width:380px;height:380px}
+.avatar-ring{position:absolute;inset:-12px;border-radius:50%;background:conic-gradient(from 0deg,transparent 0%,var(--blue)25%,transparent 50%,var(--cyan)75%,transparent 100%);animation:spinRing 6s linear infinite}
+.avatar-ring-2{position:absolute;inset:-6px;border-radius:50%;background:var(--bg2)}
+@keyframes spinRing{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.avatar-circle{position:absolute;inset:0;border-radius:50%;background:linear-gradient(135deg,#1a2540,#0d1120);border:1px solid rgba(59,130,246,.2);display:flex;align-items:center;justify-content:center}
+.avatar-initials{font-family:var(--font-display);font-size:6rem;font-weight:800;background:linear-gradient(135deg,var(--blue-bright),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.04em}
+.avatar-float-card{position:absolute;background:rgba(13,17,32,.9);border:1px solid var(--glass-border);border-radius:12px;padding:10px 14px;backdrop-filter:blur(20px);font-size:.78rem;font-weight:600;white-space:nowrap;box-shadow:0 8px 32px rgba(0,0,0,.4)}
+.avatar-float-card.top-right{top:30px;right:-40px;animation:float1 4s ease-in-out infinite;color:var(--blue-bright);border-color:rgba(59,130,246,.3)}
+.avatar-float-card.bottom-left{bottom:40px;left:-40px;animation:float2 5s ease-in-out infinite;color:var(--cyan);border-color:rgba(34,211,238,.3)}
+.avatar-float-card.bottom-right{bottom:10px;right:-20px;animation:float1 3.5s ease-in-out infinite reverse;color:var(--gold-light);border-color:rgba(245,158,11,.3)}
+@keyframes float1{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes float2{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+
+/* STATS */
+#stats{padding:3rem 5%;background:linear-gradient(180deg,transparent,var(--bg2));border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;max-width:1000px;margin:0 auto;text-align:center}
+.stat-num{font-family:var(--font-display);font-size:2.5rem;font-weight:800;letter-spacing:-.04em;background:linear-gradient(135deg,var(--blue-bright),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:.4rem}
+.stat-label{font-size:.82rem;color:var(--text-muted);font-weight:500;letter-spacing:.03em;text-transform:uppercase}
+
+/* SECTION */
+.section-inner{max-width:1200px;margin:0 auto;padding:0 5%}
+.section-header{text-align:center;margin-bottom:4rem}
+.section-tag{display:inline-block;padding:4px 14px;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.2);border-radius:100px;font-size:.75rem;font-weight:600;color:var(--blue-bright);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem}
+.section-title{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;letter-spacing:-.03em;margin-bottom:1rem}
+.section-desc{font-size:1.05rem;color:var(--text-muted);max-width:560px;margin:0 auto;line-height:1.7;font-weight:300}
+
+/* ABOUT */
+#about{padding:7rem 0}
+.about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:center}
+.about-card-main{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:2.5rem;backdrop-filter:blur(20px);position:relative;overflow:hidden}
+.about-card-main::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--cyan),var(--gold))}
+.about-avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--cyan));display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;font-size:1.5rem;color:#fff;margin-bottom:1.5rem}
+.about-name{font-family:var(--font-display);font-size:1.6rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.25rem}
+.about-role{font-size:.875rem;color:var(--blue-bright);font-weight:500;margin-bottom:1rem;line-height:1.5}
+.about-mini-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem}
+.mini-stat{background:rgba(59,130,246,.06);border:1px solid rgba(59,130,246,.15);border-radius:10px;padding:.875rem;text-align:center}
+.mini-stat-num{font-family:var(--font-display);font-size:1.5rem;font-weight:800;color:var(--blue-bright);letter-spacing:-.03em}
+.mini-stat-label{font-size:.72rem;color:var(--text-muted);font-weight:500}
+.about-content h2{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.3rem);font-weight:800;letter-spacing:-.03em;margin-bottom:1.5rem}
+.about-content p{font-size:.97rem;color:var(--text-muted);line-height:1.8;margin-bottom:1.25rem;font-weight:300}
+.focus-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin:1.5rem 0 2rem}
+.focus-list li{display:flex;align-items:center;gap:8px;font-size:.88rem;color:var(--text-muted)}
+.focus-list li::before{content:'▸';color:var(--blue);font-size:.7rem}
+.availability-tag{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.25);border-radius:100px;font-size:.82rem;font-weight:600;color:#4ade80;margin-top:.5rem}
+.availability-tag::before{content:'';width:7px;height:7px;background:#4ade80;border-radius:50%;animation:pulse 2s infinite}
+
+/* SERVICES */
+#services{padding:7rem 0;background:var(--bg2)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.5rem}
+.service-card{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);padding:2rem;transition:all var(--transition);position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--accent-glow),transparent 60%);opacity:0;transition:opacity var(--transition)}
+.service-card:hover{border-color:rgba(59,130,246,.35);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.3)}
+.service-card:hover::before{opacity:1}
+.service-icon{font-size:2rem;margin-bottom:1rem;display:block}
+.service-card h3{font-family:var(--font-display);font-size:1rem;font-weight:700;margin-bottom:.6rem}
+.service-card p{font-size:.84rem;color:var(--text-muted);line-height:1.65;font-weight:300}
+.service-tag{display:inline-block;margin-top:1rem;font-size:.7rem;color:var(--blue-bright);font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+
+/* TECH STACK */
+#techstack{padding:7rem 0}
+.techstack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.tech-category{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);padding:2rem;transition:all var(--transition)}
+.tech-category:hover{border-color:rgba(59,130,246,.3);box-shadow:0 8px 30px rgba(0,0,0,.2)}
+.tech-cat-icon{font-size:1.8rem;margin-bottom:.6rem;display:block}
+.tech-cat-title{font-family:var(--font-display);font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--blue-bright);margin-bottom:.3rem}
+.tech-cat-sub{font-size:.75rem;color:var(--text-dim);margin-bottom:1rem;line-height:1.4}
+.tech-tags{display:flex;flex-wrap:wrap;gap:.45rem}
+.tech-tag{padding:4px 10px;background:rgba(59,130,246,.07);border:1px solid rgba(59,130,246,.18);border-radius:6px;font-size:.78rem;font-weight:500;color:var(--text);transition:all var(--transition)}
+.tech-tag:hover{background:rgba(59,130,246,.15);border-color:rgba(59,130,246,.4);color:var(--blue-bright)}
+.tech-tag.hi{background:rgba(34,211,238,.08);border-color:rgba(34,211,238,.25);color:var(--cyan)}
+
+/* EXPERIENCE */
+#experience{padding:7rem 0;background:var(--bg2)}
+.exp-summary{display:flex;justify-content:center;gap:1.25rem;flex-wrap:wrap;margin-bottom:4rem}
+.exp-pill{display:flex;align-items:center;gap:10px;padding:10px 20px;background:var(--glass);border:1px solid var(--glass-border);border-radius:100px;font-size:.85rem;font-weight:500;color:var(--text-muted)}
+.exp-pill strong{color:var(--text)}
+.timeline-wrap{max-width:800px;margin:0 auto}
+.tl-item{display:grid;grid-template-columns:24px 1fr;gap:1.5rem;padding-bottom:2.5rem}
+.tl-line{display:flex;flex-direction:column;align-items:center}
+.tl-dot{width:14px;height:14px;border-radius:50%;background:var(--blue);border:2px solid var(--bg2);box-shadow:0 0 14px var(--accent-glow);flex-shrink:0;margin-top:5px}
+.tl-item:first-child .tl-dot{background:var(--cyan);box-shadow:0 0 14px var(--cyan-glow)}
+.tl-item:last-child .tl-dot{background:var(--gold);box-shadow:0 0 14px var(--gold-glow)}
+.tl-conn{width:1px;flex:1;background:linear-gradient(180deg,rgba(59,130,246,.4),rgba(59,130,246,.04));margin-top:4px}
+.tl-card{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);padding:1.5rem;transition:all var(--transition)}
+.tl-card:hover{border-color:rgba(59,130,246,.3);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.tl-period{font-size:.7rem;font-weight:600;color:var(--blue-bright);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.25rem}
+.tl-item:first-child .tl-period{color:var(--cyan)}
+.tl-role{font-family:var(--font-display);font-size:1rem;font-weight:700;margin-bottom:.2rem}
+.tl-company{font-size:.82rem;color:var(--text-muted);margin-bottom:.75rem;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tl-badge{padding:2px 8px;border-radius:4px;font-size:.68rem;font-weight:600;background:rgba(59,130,246,.1);color:var(--blue-bright);border:1px solid rgba(59,130,246,.2)}
+.tl-item:first-child .tl-badge{background:rgba(34,211,238,.1);color:var(--cyan);border-color:rgba(34,211,238,.25)}
+.tl-pts{list-style:none;display:flex;flex-direction:column;gap:.35rem}
+.tl-pts li{font-size:.82rem;color:var(--text-muted);padding-left:16px;position:relative;line-height:1.55}
+.tl-pts li::before{content:'→';position:absolute;left:0;color:var(--blue);font-size:.7rem;top:2px}
+
+/* PROJECTS */
+#projects{padding:7rem 0}
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
+.project-card{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-lg);overflow:hidden;transition:all var(--transition)}
+.project-card:hover{border-color:rgba(59,130,246,.35);transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.project-thumb{height:170px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.project-thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(7,9,15,.85)100%)}
+.t1{background:linear-gradient(135deg,#0d1f4a,#061028)}
+.t2{background:linear-gradient(135deg,#1a0d3a,#0a0620)}
+.t3{background:linear-gradient(135deg,#0d2a1a,#041408)}
+.t4{background:linear-gradient(135deg,#2a1a0d,#120a04)}
+.t5{background:linear-gradient(135deg,#0d1f3a,#040e1e)}
+.t6{background:linear-gradient(135deg,#1a2a0d,#0c1604)}
+.t7{background:linear-gradient(135deg,#2a0d1a,#160410)}
+.t8{background:linear-gradient(135deg,#0d2020,#040e0e)}
+.thumb-emoji{position:relative;z-index:1;font-size:3.5rem;filter:drop-shadow(0 4px 20px rgba(0,0,0,.5))}
+.store-badges{position:absolute;bottom:10px;right:10px;z-index:2;display:flex;gap:4px}
+.sbadge{padding:3px 7px;border-radius:4px;font-size:.62rem;font-weight:700;letter-spacing:.03em}
+.sbadge.play{background:rgba(52,211,153,.15);border:1px solid rgba(52,211,153,.35);color:#34d399}
+.sbadge.ios{background:rgba(96,165,250,.15);border:1px solid rgba(96,165,250,.35);color:var(--blue-bright)}
+.sbadge.amazon{background:rgba(251,191,36,.12);border:1px solid rgba(251,191,36,.3);color:var(--gold-light)}
+.sbadge.tv{background:rgba(167,139,250,.12);border:1px solid rgba(167,139,250,.3);color:#a78bfa}
+.project-body{padding:1.6rem}
+.project-category{font-size:.7rem;font-weight:600;color:var(--blue-bright);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5rem}
+.project-card h3{font-family:var(--font-display);font-size:1.1rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.5rem}
+.project-card p{font-size:.83rem;color:var(--text-muted);line-height:1.65;margin-bottom:.75rem;font-weight:300}
+.impact-bar{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.9rem}
+.impact-chip{padding:3px 9px;background:rgba(52,211,153,.07);border:1px solid rgba(52,211,153,.2);border-radius:5px;font-size:.7rem;color:#34d399;font-weight:600}
+.project-stack{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}
+.stack-chip{padding:3px 9px;background:rgba(59,130,246,.07);border:1px solid rgba(59,130,246,.18);border-radius:5px;font-size:.7rem;color:var(--blue-bright);font-weight:500}
+.project-actions{display:flex;gap:.5rem;flex-wrap:wrap}
+.btn-pp{padding:.5rem .9rem;border-radius:7px;font-family:var(--font-body);font-size:.75rem;font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:5px;transition:all var(--transition)}
+.btn-pp.play{background:rgba(52,211,153,.1);color:#34d399;border:1px solid rgba(52,211,153,.3)}
+.btn-pp.play:hover{background:rgba(52,211,153,.2);transform:translateY(-1px)}
+.btn-pp.ios{background:rgba(96,165,250,.1);color:var(--blue-bright);border:1px solid rgba(96,165,250,.3)}
+.btn-pp.ios:hover{background:rgba(96,165,250,.2);transform:translateY(-1px)}
+.btn-pp.amazon{background:rgba(251,191,36,.08);color:var(--gold-light);border:1px solid rgba(251,191,36,.25)}
+.btn-pp.amazon:hover{background:rgba(251,191,36,.16);transform:translateY(-1px)}
+.btn-pp.dark{background:var(--glass);color:var(--text-muted);border:1px solid var(--glass-border)}
+.btn-pp.dark:hover{border-color:var(--blue);color:var(--text)}
+
+/* RESULTS */
+#results{padding:7rem 0;background:var(--bg2)}
+.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.result-card{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);padding:2rem;text-align:center;transition:all var(--transition);position:relative;overflow:hidden}
+.result-card::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:60%;height:1px;background:linear-gradient(90deg,transparent,var(--blue),transparent)}
+.result-card:hover{border-color:rgba(59,130,246,.3);transform:translateY(-4px)}
+.result-num{font-family:var(--font-display);font-size:2.5rem;font-weight:800;letter-spacing:-.04em;margin-bottom:.5rem}
+.result-card:nth-child(1) .result-num{color:var(--cyan)}
+.result-card:nth-child(2) .result-num{color:var(--blue-bright)}
+.result-card:nth-child(3) .result-num{color:var(--gold-light)}
+.result-card:nth-child(4) .result-num{color:#a78bfa}
+.result-card:nth-child(5) .result-num{color:#f472b6}
+.result-card:nth-child(6) .result-num{color:#4ade80}
+.result-label{font-size:.88rem;color:var(--text-muted);line-height:1.5}
+
+/* TESTIMONIALS */
+#testimonials{padding:7rem 0}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.testi-card{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);padding:2rem;transition:all var(--transition)}
+.testi-card:hover{border-color:rgba(59,130,246,.3);transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.2)}
+.testi-stars{color:var(--gold-light);font-size:.9rem;letter-spacing:2px;margin-bottom:1rem}
+.testi-q{font-size:2rem;color:rgba(59,130,246,.35);font-family:Georgia,serif;line-height:1;margin-bottom:.5rem}
+.testi-text{font-size:.87rem;color:var(--text-muted);line-height:1.75;font-style:italic;margin-bottom:1.5rem;font-weight:300}
+.testi-author{display:flex;align-items:center;gap:12px}
+.testi-avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;color:#fff;flex-shrink:0}
+.av1{background:linear-gradient(135deg,#3b82f6,#06b6d4)}
+.av2{background:linear-gradient(135deg,#8b5cf6,#ec4899)}
+.av3{background:linear-gradient(135deg,#f59e0b,#ef4444)}
+.testi-name{font-weight:700;font-size:.88rem}
+.testi-role{font-size:.72rem;color:var(--text-muted)}
+
+/* WHY */
+#why{padding:7rem 0;background:var(--bg2)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.why-card{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);padding:2rem;transition:all var(--transition);text-align:center}
+.why-card:hover{border-color:rgba(59,130,246,.3);transform:translateY(-4px)}
+.why-icon{font-size:2.2rem;margin-bottom:1rem;display:block}
+.why-card h3{font-family:var(--font-display);font-size:1rem;font-weight:700;margin-bottom:.6rem}
+.why-card p{font-size:.83rem;color:var(--text-muted);line-height:1.65;font-weight:300}
+
+/* CONTACT */
+#contact{padding:7rem 0;position:relative;overflow:hidden}
+#contact::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(59,130,246,.06)0%,transparent 70%);pointer-events:none}
+.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:4rem;align-items:start}
+.contact-left h2{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.5rem);font-weight:800;letter-spacing:-.03em;margin-bottom:1rem}
+.contact-left p{font-size:.95rem;color:var(--text-muted);line-height:1.75;margin-bottom:2rem;font-weight:300}
+.contact-links{display:flex;flex-direction:column;gap:.75rem}
+.contact-link-item{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--glass);border:1px solid var(--glass-border);border-radius:10px;text-decoration:none;color:var(--text-muted);font-size:.875rem;transition:all var(--transition)}
+.contact-link-item:hover{border-color:rgba(59,130,246,.35);color:var(--text);transform:translateX(4px)}
+.contact-form{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:2.5rem;backdrop-filter:blur(20px);position:relative;overflow:hidden}
+.contact-form::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--cyan))}
+.form-group{margin-bottom:1.25rem}
+.form-label{display:block;font-size:.78rem;font-weight:600;color:var(--text-muted);letter-spacing:.05em;text-transform:uppercase;margin-bottom:.5rem}
+.form-input,.form-textarea{width:100%;padding:.875rem 1rem;background:rgba(255,255,255,.04);border:1px solid var(--glass-border);border-radius:8px;color:var(--text);font-family:var(--font-body);font-size:.9rem;outline:none;transition:all var(--transition)}
+.form-input:focus,.form-textarea:focus{border-color:rgba(59,130,246,.5);background:rgba(59,130,246,.04);box-shadow:0 0 0 3px rgba(59,130,246,.1)}
+.form-textarea{min-height:120px;resize:vertical}
+.form-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.5rem}
+.btn-submit{flex:1;min-width:140px;padding:.875rem 1.5rem;background:var(--blue);color:#fff;border:none;border-radius:8px;font-family:var(--font-body);font-size:.9rem;font-weight:600;cursor:pointer;transition:all var(--transition)}
+.btn-submit:hover{background:var(--blue-bright);transform:translateY(-2px);box-shadow:0 8px 24px rgba(59,130,246,.4)}
+.btn-wa{flex:1;min-width:140px;padding:.875rem 1.5rem;background:rgba(37,211,102,.1);color:#25d366;border:1px solid rgba(37,211,102,.3);border-radius:8px;font-family:var(--font-body);font-size:.9rem;font-weight:600;cursor:pointer;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;transition:all var(--transition)}
+.btn-wa:hover{background:rgba(37,211,102,.18);transform:translateY(-2px)}
+.btn-call{width:100%;padding:.875rem 1.5rem;background:rgba(245,158,11,.08);color:var(--gold-light);border:1px solid rgba(245,158,11,.25);border-radius:8px;font-family:var(--font-body);font-size:.9rem;font-weight:600;cursor:pointer;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;transition:all var(--transition);margin-top:.75rem}
+.btn-call:hover{background:rgba(245,158,11,.15);transform:translateY(-2px)}
+
+/* FOOTER */
+footer{border-top:1px solid var(--glass-border);padding:3rem 5% 2rem;background:var(--bg)}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem}
+.footer-brand .nav-logo{font-size:1.3rem;display:inline-block;margin-bottom:.75rem}
+.footer-brand p{font-size:.85rem;color:var(--text-muted);line-height:1.7;margin-bottom:1.25rem;font-weight:300}
+.footer-stack{display:flex;flex-wrap:wrap;gap:.4rem}
+.f-tag{padding:3px 9px;background:var(--glass);border:1px solid var(--glass-border);border-radius:5px;font-size:.72rem;color:var(--text-muted)}
+.footer-col h4{font-family:var(--font-display);font-size:.85rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1rem}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.footer-links a{font-size:.875rem;color:var(--text-dim);text-decoration:none;transition:color var(--transition)}
+.footer-links a:hover{color:var(--text)}
+.social-links{display:flex;gap:.75rem;flex-wrap:wrap}
+.social-link{width:38px;height:38px;border-radius:8px;background:var(--glass);border:1px solid var(--glass-border);display:flex;align-items:center;justify-content:center;font-size:1rem;text-decoration:none;color:var(--text-muted);transition:all var(--transition)}
+.social-link:hover{border-color:rgba(59,130,246,.4);color:var(--blue-bright);background:rgba(59,130,246,.08);transform:translateY(-2px)}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:1.5rem;border-top:1px solid var(--glass-border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:.8rem;color:var(--text-dim)}
+.footer-bottom a{color:var(--blue-bright);text-decoration:none}
+
+/* ANIM */
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+.fade-up.d1{transition-delay:.1s}.fade-up.d2{transition-delay:.2s}.fade-up.d3{transition-delay:.3s}.fade-up.d4{transition-delay:.4s}
+
+#toast{position:fixed;bottom:2rem;right:2rem;padding:.875rem 1.5rem;background:rgba(13,17,32,.95);border:1px solid rgba(59,130,246,.35);border-radius:10px;backdrop-filter:blur(20px);font-size:.875rem;font-weight:500;color:var(--text);z-index:9999;transform:translateY(100px);opacity:0;transition:all .4s cubic-bezier(0.4,0,0.2,1);box-shadow:0 8px 30px rgba(0,0,0,.4)}
+#toast.show{transform:translateY(0);opacity:1}
+#toast.success{border-color:rgba(74,222,128,.4)}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;gap:3rem}
+  .avatar-wrap{width:280px;height:280px}
+  .about-grid{grid-template-columns:1fr;gap:2.5rem}
+  .techstack-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-links{display:none}.hamburger{display:flex}
+  .hero-inner{text-align:center}.hero-visual{display:none}
+  .hero-ctas{justify-content:center}.trust-badges{justify-content:center}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .projects-grid{grid-template-columns:1fr}
+  .results-grid{grid-template-columns:repeat(2,1fr)}
+  .testi-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr;gap:2rem}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .focus-list{grid-template-columns:1fr}
+  .techstack-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .why-grid{grid-template-columns:1fr}
+  .results-grid{grid-template-columns:1fr}
+  .hero-ctas{flex-direction:column;align-items:stretch}
+  .btn-primary,.btn-secondary,.btn-whatsapp{justify-content:center}
+}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">MM<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#techstack">Tech Stack</a></li>
+    <li><a href="#experience">Journey</a></li>
+    <li><a href="#projects">Work</a></li>
+    <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#techstack" onclick="closeMenu()">Tech Stack</a>
+  <a href="#experience" onclick="closeMenu()">Experience</a>
+  <a href="#projects" onclick="closeMenu()">Projects</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-glow-1"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">🚀 Available for Freelance Worldwide</div>
+      <h1 class="hero-title">
+        I Build<br/>
+        <span class="gradient-text">High-Performance</span><br/>
+        Mobile Apps That<br/>Grow Businesses
+      </h1>
+      <p class="hero-sub">Freelance Android &amp; Flutter Developer helping startups and companies launch scalable, beautiful, fast mobile applications — from idea to Play Store.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">✦ Hire Me</a>
+        <a href="#projects" class="btn-secondary">View Projects →</a>
+        <a href="https://wa.me/919998841576?text=Hi%20Muzammil%2C%20I%20want%20to%20discuss%20a%20mobile%20app%20project." target="_blank" class="btn-whatsapp">💬 WhatsApp Me</a>
+      </div>
+      <div class="trust-badges">
+        <div class="badge-item"><span class="dot">★</span>10+ Years Experience</div>
+        <div class="badge-item"><span class="dot">★</span>40+ Live Apps</div>
+        <div class="badge-item"><span class="dot">★</span>Android &amp; Flutter Expert</div>
+        <div class="badge-item"><span class="dot">★</span>Worldwide Freelance</div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="avatar-wrap">
+        <div class="avatar-ring"></div>
+        <div class="avatar-ring-2"></div>
+        <div class="avatar-circle"><div class="avatar-initials">MM</div></div>
+        <div class="avatar-float-card top-right">📱 Flutter Expert</div>
+        <div class="avatar-float-card bottom-left">🚀 40+ Apps Live</div>
+        <div class="avatar-float-card bottom-right">⭐ 10 Yrs Exp</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="stats-grid">
+    <div class="fade-up"><div class="stat-num" data-target="10">0</div><div class="stat-label">Years Experience</div></div>
+    <div class="fade-up d1"><div class="stat-num" data-target="40">0</div><div class="stat-label">Apps Delivered</div></div>
+    <div class="fade-up d2"><div class="stat-num" data-target="5">0</div><div class="stat-label">App Stores</div></div>
+    <div class="fade-up d3"><div class="stat-num" data-target="10">0</div><div class="stat-label">K+ Users Served</div></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="fade-up">
+        <div class="about-card-main">
+          <div class="about-avatar">MM</div>
+          <div class="about-name">Muzammil Modan</div>
+          <div class="about-role">Senior Android &amp; Flutter Developer<br/>Tech Lead · Mobile Architect</div>
+          <p style="font-size:.8rem;color:var(--text-muted);line-height:1.6;margin-bottom:.25rem">📍 Ahmedabad, India · Working with clients globally</p>
+          <div class="availability-tag">Available for new projects</div>
+          <div class="about-mini-stats">
+            <div class="mini-stat"><div class="mini-stat-num">7+</div><div class="mini-stat-label">Android Yrs</div></div>
+            <div class="mini-stat"><div class="mini-stat-num">5+</div><div class="mini-stat-label">Flutter Yrs</div></div>
+            <div class="mini-stat"><div class="mini-stat-num">40+</div><div class="mini-stat-label">Apps Shipped</div></div>
+            <div class="mini-stat"><div class="mini-stat-num">10K+</div><div class="mini-stat-label">Users Served</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="about-content fade-up d2">
+        <div class="section-tag">About Me</div>
+        <h2>Turning Ideas Into<br/>Powerful Mobile Experiences</h2>
+        <p>My name is Muzammil Modan. I am a professional mobile application developer with over a decade of expertise in Android (Java &amp; Kotlin — 7+ years) and Flutter (Dart — 5+ years).</p>
+        <p>I help startups, businesses, and entrepreneurs build powerful, scalable mobile applications. I've architected OTT platforms serving 10,000+ subscribers, built cross-platform casting SDKs, real-time GPS tracking, healthcare, social, and e-commerce apps — shipped across 5 major app stores globally.</p>
+        <p>I work closely with clients worldwide — from Italy to India — delivering clean architecture, beautiful UIs, and code you can maintain and grow.</p>
+        <ul class="focus-list">
+          <li>Lightning-Fast Apps</li><li>Clean Architecture</li>
+          <li>Beautiful UI/UX</li><li>Scalable Integration</li>
+          <li>Play Store Launch</li><li>Long-Term Support</li>
+          <li>Global Collaboration</li><li>Agile &amp; On-Time</li>
+        </ul>
+        <a href="#contact" class="btn-primary">Let's Build Together →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Services</div>
+      <h2 class="section-title">What I Build For You</h2>
+      <p class="section-desc">End-to-end mobile development services — from a single screen to a full production platform.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up"><span class="service-icon">🤖</span><h3>Android App Development</h3><p>Native Android in Kotlin &amp; Java — speed, stability, Jetpack architecture, and Play Store success.</p><span class="service-tag">Kotlin · Java · Jetpack · MVVM</span></div>
+      <div class="service-card fade-up d1"><span class="service-icon">🦋</span><h3>Flutter Cross-Platform Apps</h3><p>One codebase, two platforms — beautiful Flutter apps for Android &amp; iOS with native performance.</p><span class="service-tag">Dart · Flutter 3.x · GetX · BLoC</span></div>
+      <div class="service-card fade-up d2"><span class="service-icon">📺</span><h3>OTT &amp; Streaming Apps</h3><p>Full OTT platforms — ExoPlayer, Smart TV casting (DLNA, Chromecast, AirPlay, Samsung, LG), subscriptions.</p><span class="service-tag">ExoPlayer · DLNA · Chromecast · Firebase</span></div>
+      <div class="service-card fade-up"><span class="service-icon">📹</span><h3>Audio &amp; Video Calling</h3><p>One-to-one and group calling using WebRTC, Twilio, and Sinch — integrated into any Android or Flutter app.</p><span class="service-tag">WebRTC · Twilio · Sinch</span></div>
+      <div class="service-card fade-up d1"><span class="service-icon">🔴</span><h3>Live Streaming</h3><p>One-to-one and one-to-many live streaming — for social apps, events, coaching, and broadcast platforms.</p><span class="service-tag">WebRTC · Twilio · 1:1 &amp; 1:Many</span></div>
+      <div class="service-card fade-up d2"><span class="service-icon">💳</span><h3>Payment Gateway Integration</h3><p>Secure, PCI-compliant payment flows with Stripe, PayPal, Razorpay, Mada, and PayTabs.</p><span class="service-tag">Stripe · Razorpay · PayPal · Mada</span></div>
+      <div class="service-card fade-up"><span class="service-icon">⚡</span><h3>Performance Optimisation</h3><p>Memory profiling, cold start reduction, lazy loading — apps that feel instantly snappy on every device.</p><span class="service-tag">Profiler · Room · Hilt · Lazy Loading</span></div>
+      <div class="service-card fade-up d1"><span class="service-icon">🔥</span><h3>Firebase Integration</h3><p>Auth, Firestore, push notifications, remote config, GA4, and Crashlytics — the full Firebase production stack.</p><span class="service-tag">FCM · GA4 · Crashlytics · Firestore</span></div>
+      <div class="service-card fade-up d2"><span class="service-icon">📦</span><h3>App Store Publishing</h3><p>End-to-end publishing on Google Play, Apple App Store, Amazon Appstore, Samsung Galaxy Store, and LG Store.</p><span class="service-tag">Google · Apple · Amazon · Samsung · LG</span></div>
+      <div class="service-card fade-up"><span class="service-icon">🏢</span><h3>Custom Business Apps</h3><p>ERP, CRM, SaaS, GPS tracking, field service — built around your workflow with scalable clean architecture.</p><span class="service-tag">Clean Arch · WebSocket · REST API</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section id="techstack">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Tech Stack &amp; Expertise</div>
+      <h2 class="section-title">Mobile Developing Expert</h2>
+      <p class="section-desc">Android Expert · Flutter Expert · 10 years of hands-on mastery across the full mobile development ecosystem.</p>
+    </div>
+    <div class="techstack-grid">
+
+      <div class="tech-category fade-up">
+        <span class="tech-cat-icon">🦋</span>
+        <div class="tech-cat-title">Flutter</div>
+        <div class="tech-cat-sub">5+ years · Cross-platform specialist</div>
+        <div class="tech-tags">
+          <span class="tech-tag hi">Dart</span><span class="tech-tag hi">Flutter 3.x</span>
+          <span class="tech-tag">GetX</span><span class="tech-tag">BLoC / Cubit</span>
+          <span class="tech-tag">Provider</span><span class="tech-tag">Dio</span>
+          <span class="tech-tag">Hive</span><span class="tech-tag">SharedPrefs</span>
+          <span class="tech-tag">Platform Channels</span><span class="tech-tag">Custom Widgets</span>
+          <span class="tech-tag">Animations</span>
+        </div>
+      </div>
+
+      <div class="tech-category fade-up d1">
+        <span class="tech-cat-icon">🤖</span>
+        <div class="tech-cat-title">Android</div>
+        <div class="tech-cat-sub">7+ years · Native Android expert</div>
+        <div class="tech-tags">
+          <span class="tech-tag hi">Kotlin</span><span class="tech-tag hi">Java</span>
+          <span class="tech-tag">MVVM</span><span class="tech-tag">Clean Architecture</span>
+          <span class="tech-tag">Jetpack</span><span class="tech-tag">Hilt / Koin</span>
+          <span class="tech-tag">Room DB</span><span class="tech-tag">DataBinding</span>
+          <span class="tech-tag">Retrofit</span><span class="tech-tag">Coroutines</span>
+        </div>
+      </div>
+
+      <div class="tech-category fade-up d2">
+        <span class="tech-cat-icon">📹</span>
+        <div class="tech-cat-title">Audio &amp; Video Calling</div>
+        <div class="tech-cat-sub">1:1 and group calling</div>
+        <div class="tech-tags">
+          <span class="tech-tag hi">WebRTC</span><span class="tech-tag hi">Twilio</span>
+          <span class="tech-tag hi">Sinch</span><span class="tech-tag">Video SDK</span>
+          <span class="tech-tag">Audio SDK</span><span class="tech-tag">P2P Calling</span>
+          <span class="tech-tag">Group Calls</span>
+        </div>
+      </div>
+
+      <div class="tech-category fade-up">
+        <span class="tech-cat-icon">🔴</span>
+        <div class="tech-cat-title">Live Streaming</div>
+        <div class="tech-cat-sub">1:1 and 1:many broadcasting</div>
+        <div class="tech-tags">
+          <span class="tech-tag hi">WebRTC</span><span class="tech-tag hi">Twilio</span>
+          <span class="tech-tag">RTMP</span><span class="tech-tag">HLS</span>
+          <span class="tech-tag">1:1 Live</span><span class="tech-tag">1:Many Live</span>
+          <span class="tech-tag">ExoPlayer</span>
+        </div>
+      </div>
+
+      <div class="tech-category fade-up d1">
+        <span class="tech-cat-icon">📺</span>
+        <div class="tech-cat-title">Streaming &amp; Casting</div>
+        <div class="tech-cat-sub">OTT, Smart TV, media delivery</div>
+        <div class="tech-tags">
+          <span class="tech-tag hi">ExoPlayer</span><span class="tech-tag hi">DLNA</span>
+          <span class="tech-tag hi">Chromecast</span><span class="tech-tag">AirPlay</span>
+          <span class="tech-tag">Samsung Tizen</span><span class="tech-tag">LG WebOS</span>
+          <span class="tech-tag">Android TV SDK</span><span class="tech-tag">Fire TV</span>
+          <span class="tech-tag">JS SDK / WebView</span>
+        </div>
+      </div>
+
+      <div class="tech-category fade-up d2">
+        <span class="tech-cat-icon">🌐</span>
+        <div class="tech-cat-title">Networking &amp; Backend</div>
+        <div class="tech-cat-sub">APIs, real-time, data layers</div>
+        <div class="tech-tags">
+          <span class="tech-tag hi">REST APIs</span><span class="tech-tag hi">WebSocket</span>
+          <span class="tech-tag">Socket.IO</span><span class="tech-tag">Retrofit</span>
+          <span class="tech-tag">Dio</span><span class="tech-tag">Firebase</span>
+          <span class="tech-tag">GA4</span><span class="tech-tag">SQLite</span>
+          <span class="tech-tag">Sentry</span><span class="tech-tag">Crashlytics</span>
+        </div>
+      </div>
+
+      <div class="tech-category fade-up">
+        <span class="tech-cat-icon">💳</span>
+        <div class="tech-cat-title">Payments &amp; Fintech</div>
+        <div class="tech-cat-sub">Secure, PCI-compliant flows</div>
+        <div class="tech-tags">
+          <span class="tech-tag hi">Stripe</span><span class="tech-tag">PayPal</span>
+          <span class="tech-tag">Razorpay</span><span class="tech-tag">Mada</span>
+          <span class="tech-tag">PayTabs</span><span class="tech-tag">Biometric Auth</span>
+        </div>
+      </div>
+
+      <div class="tech-category fade-up d1">
+        <span class="tech-cat-icon">🛠</span>
+        <div class="tech-cat-title">Tools &amp; DevOps</div>
+        <div class="tech-cat-sub">Dev to CI/CD pipelines</div>
+        <div class="tech-tags">
+          <span class="tech-tag">Git / GitHub</span><span class="tech-tag">Bitbucket</span>
+          <span class="tech-tag">CI/CD</span><span class="tech-tag">Jira</span>
+          <span class="tech-tag">Trello</span><span class="tech-tag">Zoho</span>
+          <span class="tech-tag">Agile / Scrum</span><span class="tech-tag">Unit Testing</span>
+          <span class="tech-tag">Code Review</span>
+        </div>
+      </div>
+
+      <div class="tech-category fade-up d2">
+        <span class="tech-cat-icon">📦</span>
+        <div class="tech-cat-title">App Stores</div>
+        <div class="tech-cat-sub">End-to-end publishing</div>
+        <div class="tech-tags">
+          <span class="tech-tag hi">Google Play Store</span>
+          <span class="tech-tag hi">Apple App Store</span>
+          <span class="tech-tag">Amazon Appstore</span>
+          <span class="tech-tag">Samsung Galaxy Store</span>
+          <span class="tech-tag">LG Content Store</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Professional Journey</div>
+      <h2 class="section-title">10+ Years of Building<br/>Mobile Products Across Industries</h2>
+      <p class="section-desc">From junior Android developer to Senior Engineer and Tech Lead — a decade of end-to-end mobile engineering.</p>
+    </div>
+    <div class="exp-summary fade-up">
+      <div class="exp-pill">🤖 <strong>7+ yrs</strong>&nbsp;Android (Java + Kotlin)</div>
+      <div class="exp-pill">🦋 <strong>5+ yrs</strong>&nbsp;Flutter (Dart)</div>
+      <div class="exp-pill">📱 <strong>40+</strong>&nbsp;Production Apps</div>
+      <div class="exp-pill">👨‍💼 Tech Lead Experience</div>
+    </div>
+    <div class="timeline-wrap">
+
+      <div class="tl-item fade-up">
+        <div class="tl-line"><div class="tl-dot"></div><div class="tl-conn"></div></div>
+        <div class="tl-card">
+          <div class="tl-period">July 2025 – Present · Current Role</div>
+          <div class="tl-role">Senior Android &amp; Flutter Developer</div>
+          <div class="tl-company">Altadefinizione <span class="tl-badge">Remote · Italy</span></div>
+          <ul class="tl-pts">
+            <li>Built AltaTV — Netflix-style OTT for the Italian market with 10,000+ paid subscribers and 2,000+ daily active users</li>
+            <li>Architected AltaPlay JS SDK — cross-domain casting (DLNA, Chromecast, AirPlay, Samsung, LG) via WebView/postMessage bridge</li>
+            <li>Built AltaPlay Receiver for Android TV, Amazon Fire TV, Samsung Galaxy Store &amp; LG Content Store</li>
+            <li>Reduced crash rate ~35% via Sentry &amp; Crashlytics proactive monitoring</li>
+            <li>Published end-to-end on Google Play, App Store, Amazon, Samsung Galaxy Store &amp; LG Content Store</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item fade-up d1">
+        <div class="tl-line"><div class="tl-dot"></div><div class="tl-conn"></div></div>
+        <div class="tl-card">
+          <div class="tl-period">July 2023 – July 2025</div>
+          <div class="tl-role">Senior Android &amp; Flutter Developer · Tech Lead</div>
+          <div class="tl-company">Mission Dev India Pvt. Ltd. <span class="tl-badge">Ahmedabad</span></div>
+          <ul class="tl-pts">
+            <li>Led a team of 5 developers — code reviews, clean architecture, reduced regression bugs by 25%</li>
+            <li>Delivered Mission GPS (1,000+ downloads) — real-time tracking with Google Maps API, WebSocket &amp; MPS integration</li>
+            <li>Built Noosom Diary — AES-encrypted privacy-first journaling app with offline-first architecture</li>
+            <li>Developed PocketChurch (Forgiveness Nailed) — deployed globally on Play Store &amp; App Store</li>
+            <li>Improved app performance ~40% via memory management, GetX &amp; BLoC state handling</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item fade-up d2">
+        <div class="tl-line"><div class="tl-dot"></div><div class="tl-conn"></div></div>
+        <div class="tl-card">
+          <div class="tl-period">July 2022 – July 2023</div>
+          <div class="tl-role">Senior Android &amp; Flutter Developer</div>
+          <div class="tl-company">Trootech Business Solutions <span class="tl-badge">Ahmedabad</span></div>
+          <ul class="tl-pts">
+            <li>Developed Hoof App (SportMounk) — Twitter-style football SaaS with live match data, player stats, real-time 1:1 chat via Socket.IO</li>
+            <li>WebSocket-powered live communication across 500+ live sporting events with zero chat latency</li>
+            <li>Delivered all sprint milestones on time across Agile/Scrum cycles with product managers and QA teams</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item fade-up">
+        <div class="tl-line"><div class="tl-dot"></div><div class="tl-conn"></div></div>
+        <div class="tl-card">
+          <div class="tl-period">April 2021 – July 2022</div>
+          <div class="tl-role">Senior Android &amp; Flutter Developer</div>
+          <div class="tl-company">Intelivita <span class="tl-badge">Ahmedabad</span></div>
+          <ul class="tl-pts">
+            <li>Shipped multiple production apps across healthcare, on-demand, e-commerce, and social domains</li>
+            <li>Integrated Stripe, PayPal, and Razorpay — secure, PCI-compliant transaction flows</li>
+            <li>Implemented audio/video calling using WebRTC and third-party SDKs across multiple client apps</li>
+            <li>Optimised app load times ~30% via memory profiling, lazy loading &amp; widget tree management</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item fade-up d1">
+        <div class="tl-line"><div class="tl-dot"></div><div class="tl-conn"></div></div>
+        <div class="tl-card">
+          <div class="tl-period">April 2018 – April 2021</div>
+          <div class="tl-role">Senior Android Developer</div>
+          <div class="tl-company">Innovius Software <span class="tl-badge">Ahmedabad</span></div>
+          <ul class="tl-pts">
+            <li>Delivered 7+ production Android apps: Greego, Vitalx Health, Moodies, AskUrDr, JobSeeker, Khadamaaty, Smart Tribu</li>
+            <li>Built native Android in Kotlin &amp; Java across fintech, healthcare, and on-demand service verticals</li>
+            <li>Standardised code review &amp; QA handoff workflows, reducing bug resolution time by 20%</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item fade-up d2">
+        <div class="tl-line"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <div class="tl-period">August 2015 – March 2018 · Where It All Began</div>
+          <div class="tl-role">Junior Android Developer</div>
+          <div class="tl-company">I-Verve Solutions Pvt. Ltd. <span class="tl-badge">Ahmedabad</span></div>
+          <ul class="tl-pts">
+            <li>Developed Android apps in Java — UI development, REST API integration, SQLite databases</li>
+            <li>Contributed to bug fixing, QA testing, UI improvements, and Play Store publishing across client projects</li>
+            <li>Built foundational expertise in Git, Android SDK, and REST API consumption</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Featured Work</div>
+      <h2 class="section-title">Production Apps I've Built</h2>
+      <p class="section-desc">Real apps. Real businesses. Live on the stores — with verified links you can tap right now.</p>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card fade-up">
+        <div class="project-thumb t1">
+          <span class="thumb-emoji">📺</span>
+          <div class="store-badges"><span class="sbadge play">Play</span><span class="sbadge ios">iOS</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-category">OTT · Streaming · Smart TV</div>
+          <h3>AltaTV — OTT Streaming Platform</h3>
+          <p>Netflix-style OTT for the Italian market — video playback, user auth, subscription management, and Smart TV casting via ExoPlayer and Firebase.</p>
+          <div class="impact-bar"><span class="impact-chip">10K+ Paid Subscribers</span><span class="impact-chip">2K+ Daily Users</span><span class="impact-chip">~35% Crash Reduction</span></div>
+          <div class="project-stack"><span class="stack-chip">Flutter</span><span class="stack-chip">ExoPlayer</span><span class="stack-chip">Firebase</span><span class="stack-chip">GA4</span><span class="stack-chip">Sentry</span></div>
+      
+        </div>
+      </div>
+
+      <div class="project-card fade-up d1">
+        <div class="project-thumb t2">
+          <span class="thumb-emoji">🔗</span>
+          <div class="store-badges"><span class="sbadge play">Play</span><span class="sbadge ios">iOS</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-category">Casting SDK · JavaScript · Smart TV</div>
+          <h3>AltaPlay — Cross-Platform Casting SDK</h3>
+          <p>Lightweight JS SDK for any web domain — communicates with Flutter app via WebView/postMessage for full DLNA, Chromecast, AirPlay, Samsung &amp; LG casting. Zero native code on web.</p>
+          <div class="impact-bar"><span class="impact-chip">DLNA + Chromecast</span><span class="impact-chip">AirPlay + Samsung + LG</span><span class="impact-chip">Reusable SDK</span></div>
+          <div class="project-stack"><span class="stack-chip">JavaScript</span><span class="stack-chip">Flutter</span><span class="stack-chip">WebView</span><span class="stack-chip">DLNA</span><span class="stack-chip">postMessage API</span></div>
+          <div class="project-actions">
+            <a href="https://play.google.com/store/apps/details?id=com.altaplay&hl=en_IN" target="_blank" class="btn-pp play">▶ Play Store</a>
+            <a href="https://apps.apple.com/in/app/altaplays/id6755672466" target="_blank" class="btn-pp ios"> App Store</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-thumb t3">
+          <span class="thumb-emoji">📡</span>
+          <div class="store-badges"><span class="sbadge play">Play</span><span class="sbadge amazon">Amazon</span><span class="sbadge tv">TV</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-category">Smart TV · Android TV · Fire TV</div>
+          <h3>AltaPlay Receiver — Multi-Platform TV</h3>
+          <p>Unified receiver app for 4 Smart TV platforms handling incoming cast sessions from the AltaPlay SDK and native protocols over local Wi-Fi. Single codebase, 4 platforms.</p>
+          <div class="impact-bar"><span class="impact-chip">Android TV</span><span class="impact-chip">Amazon Fire TV</span><span class="impact-chip">Samsung + LG</span></div>
+          <div class="project-stack"><span class="stack-chip">Flutter</span><span class="stack-chip">Android TV SDK</span><span class="stack-chip">Fire TV</span><span class="stack-chip">Samsung Tizen</span><span class="stack-chip">LG WebOS</span></div>
+          <div class="project-actions">
+            <a href="https://play.google.com/store/apps/details?id=com.altaplay.receiver&hl=en_IN" target="_blank" class="btn-pp play">▶ Play Store</a>
+            <a href="https://www.amazon.in/dp/B0G6DWGL6J/" target="_blank" class="btn-pp amazon">Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-up d1">
+        <div class="project-thumb t4">
+          <span class="thumb-emoji">🗺️</span>
+          <div class="store-badges"><span class="sbadge play">Play</span><span class="sbadge ios">iOS</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-category">GPS Tracking · Real-Time · Transit</div>
+          <h3>Mission GPS — Real-Time Passenger Tracking</h3>
+          <p>Real-time GPS tracking integrated with Mission's MPS backend — live vehicle tracking, push notifications, and route management for passengers.</p>
+          <div class="impact-bar"><span class="impact-chip">1,000+ Downloads</span><span class="impact-chip">iOS &amp; Android</span></div>
+          <div class="project-stack"><span class="stack-chip">Flutter</span><span class="stack-chip">Google Maps API</span><span class="stack-chip">WebSocket</span><span class="stack-chip">Firebase</span></div>
+          <div class="project-actions">
+            <a href="https://play.google.com/store/apps/details?id=com.mission.gps" target="_blank" class="btn-pp play">▶ Play Store</a>
+            <a href="https://apps.apple.com/in/app/mission-gps/id1521873888" target="_blank" class="btn-pp ios"> App Store</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-thumb t5">
+          <span class="thumb-emoji">📔</span>
+          <div class="store-badges"><span class="sbadge play">Play</span><span class="sbadge ios">iOS</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-category">Privacy · Journaling · AES Encryption</div>
+          <h3>Noosom Diary — Encrypted Journal</h3>
+          <p>Zero-ads, privacy-first journaling with AES end-to-end encryption, full user data control, and offline-first architecture. Your diary, fully yours.</p>
+          <div class="impact-bar"><span class="impact-chip">AES Encrypted</span><span class="impact-chip">Zero Ads</span><span class="impact-chip">Offline-First</span></div>
+          <div class="project-stack"><span class="stack-chip">Flutter</span><span class="stack-chip">AES Encryption</span><span class="stack-chip">GetX</span><span class="stack-chip">Hive</span></div>
+          <div class="project-actions">
+            <a href="https://play.google.com/store/apps/details?id=com.noosomapp&hl=en_IN" target="_blank" class="btn-pp play">▶ Play Store</a>
+            <a href="https://apps.apple.com/in/app/noosom-diary-your-life-story/id1664062691" target="_blank" class="btn-pp ios"> App Store</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-up d1">
+        <div class="project-thumb t6">
+          <span class="thumb-emoji">📝</span>
+          <div class="store-badges"><span class="sbadge play">Play</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-category">Education · Examination · Android</div>
+          <h3>Aliva — Examination Platform</h3>
+          <p>Android examination platform enabling institutions to conduct secure online assessments with real-time result tracking and question management.</p>
+          <div class="impact-bar"><span class="impact-chip">Live on Play Store</span></div>
+          <div class="project-stack"><span class="stack-chip">Android</span><span class="stack-chip">Kotlin</span><span class="stack-chip">REST APIs</span><span class="stack-chip">MVVM</span></div>
+          <div class="project-actions">
+            <a href="https://play.google.com/store/apps/details?id=com.aliva_examination&hl=en_IN" target="_blank" class="btn-pp play">▶ Play Store</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-thumb t7">
+          <span class="thumb-emoji">🏥</span>
+          <div class="store-badges"><span class="sbadge play">Play</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-category">Healthcare · Telemedicine · Android</div>
+          <h3>AskUrDr — Healthcare Consultation</h3>
+          <p>Connects patients with doctors for online consultations — appointment booking, in-app messaging, and secure medical record management.</p>
+          <div class="impact-bar"><span class="impact-chip">Live on Play Store</span></div>
+          <div class="project-stack"><span class="stack-chip">Android</span><span class="stack-chip">Kotlin</span><span class="stack-chip">REST APIs</span><span class="stack-chip">Firebase</span></div>
+          <div class="project-actions">
+            <a href="https://play.google.com/store/apps/details?id=com.askurdr.doctors" 
+            target="_blank" class="btn-pp play">▶ Play Store</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-up d1">
+        <div class="project-thumb t8">
+          <span class="thumb-emoji">⚽</span>
+          <div class="store-badges"><span class="sbadge play">Play</span><span class="sbadge ios">iOS</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-category">Sports · Social · Real-Time SaaS</div>
+          <h3>Hoof App (SportMounk) — Football SaaS</h3>
+          <p>Twitter-style social platform for football fans — live match data, player stats, real-time 1:1 chat via Socket.IO, and live sports event updates.</p>
+          <div class="impact-bar"><span class="impact-chip">500+ Live Events</span><span class="impact-chip">Real-Time Chat</span></div>
+          <div class="project-stack"><span class="stack-chip">Flutter</span><span class="stack-chip">Socket.IO</span><span class="stack-chip">WebSocket</span><span class="stack-chip">REST APIs</span></div>
+          <div class="project-actions">
+            <a href="http://hoof.app" 
+            target="_blank" 
+            class="btn-pp play">Request Case Study</a>
+          
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section id="results">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Impact &amp; Results</div>
+      <h2 class="section-title">Business Results That Matter</h2>
+      <p class="section-desc">Real numbers from real production apps — measurable, verifiable business impact.</p>
+    </div>
+    <div class="results-grid">
+      <div class="result-card fade-up"><div class="result-num">35%</div><div class="result-label">Crash Rate Reduction<br/>via Sentry &amp; Crashlytics</div></div>
+      <div class="result-card fade-up d1"><div class="result-num">40%</div><div class="result-label">App Performance Boost<br/>through deep optimisation</div></div>
+      <div class="result-card fade-up d2"><div class="result-num">40+</div><div class="result-label">Apps Launched<br/>across 5 major stores</div></div>
+      <div class="result-card fade-up"><div class="result-num">10K+</div><div class="result-label">Active Subscribers<br/>on single OTT platform</div></div>
+      <div class="result-card fade-up d1"><div class="result-num">25%</div><div class="result-label">Fewer Regression Bugs<br/>as Tech Lead</div></div>
+      <div class="result-card fade-up d2"><div class="result-num">500+</div><div class="result-label">Live Sporting Events<br/>via real-time WebSocket</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">What Clients Say</div>
+      <h2 class="section-title">Trusted by Founders &amp; CTOs</h2>
+      <p class="section-desc">Honest feedback from people who've shipped real products with me.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card fade-up">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-q">"</div>
+        <p class="testi-text">Muzammil delivered our OTT platform on time and exceeded every expectation. His knowledge of ExoPlayer and Firebase is unmatched. He also built our AltaPlay casting app — supporting DLNA, LG, AirPlay, and Chromecast — a genuinely impressive piece of engineering. Highly recommend for any streaming project.</p>
+        <div class="testi-author">
+          <div class="testi-avatar av1">VM</div>
+          <div>
+            <div class="testi-name">Vincenzo Mazza</div>
+            <div class="testi-role">Founder, Milnatutt LTD · Italy</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card fade-up d1">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-q">"</div>
+        <p class="testi-text">Outstanding Flutter developer. Built our payment app from scratch in 8 weeks. Clean code, great communication, and zero post-launch bugs. Muzammil understands the business side too — not just the technical. That's rare. Will hire again without hesitation.</p>
+        <div class="testi-author">
+          <div class="testi-avatar av2">PM</div>
+          <div>
+            <div class="testi-name">Priya Mehta</div>
+            <div class="testi-role">CTO · Fintech Startup</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card fade-up d2">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-q">"</div>
+        <p class="testi-text">Muzammil helped us migrate our legacy Android app to modern Kotlin architecture. Performance improved by 40% and our team can now maintain it easily. Professional, thorough, communicates clearly throughout. Highly recommended for any Android migration or new build.</p>
+        <div class="testi-author">
+          <div class="testi-avatar av3">AP</div>
+          <div>
+            <div class="testi-name">Arjun Patel</div>
+            <div class="testi-role">Head of Engineering · Tech Company</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Why Me</div>
+      <h2 class="section-title">Why Hire Muzammil?</h2>
+      <p class="section-desc">The qualities that keep clients coming back — project after project, year after year.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-up"><span class="why-icon">⚡</span><h3>Fast Delivery</h3><p>Agile workflow with clear sprint milestones. You'll always know what's happening and when it ships.</p></div>
+      <div class="why-card fade-up d1"><span class="why-icon">💬</span><h3>Clear Communication</h3><p>Daily updates, transparent progress, quick responses. No ghosting, no surprises, ever.</p></div>
+      <div class="why-card fade-up d2"><span class="why-icon">🎯</span><h3>Business-Focused Dev</h3><p>I don't just write code — I think about conversions, retention, and your actual business outcomes.</p></div>
+      <div class="why-card fade-up"><span class="why-icon">✅</span><h3>Production-Ready Code</h3><p>Clean architecture, testing, CI/CD — code you can scale and maintain without rebuilding from scratch.</p></div>
+      <div class="why-card fade-up d1"><span class="why-icon">🔄</span><h3>Long-Term Support</h3><p>I'm with you after launch — updates, bug fixes, and new features as your app grows.</p></div>
+      <div class="why-card fade-up d2"><span class="why-icon">💎</span><h3>Affordable Pricing</h3><p>Premium quality without agency overhead. Enterprise-grade apps at startup-friendly freelance rates.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Get In Touch</div>
+      <h2 class="section-title">Let's Build Your Next App</h2>
+      <p class="section-desc">Tell me about your project. I respond within 24 hours.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-left fade-up">
+        <h2>Ready to Launch<br/>Something Great?</h2>
+        <p>Whether you're a startup with a bold idea, a business needing a mobile presence, or an agency looking for a reliable Flutter/Android partner — let's talk.</p>
+        <div class="contact-links">
+          <a href="mailto:muzammil.modan786@gmail.com" class="contact-link-item">
+            <span>📧</span><div><div style="font-weight:600;font-size:.82rem;color:var(--text)">Email Me</div><div style="font-size:.78rem">muzammil.modan786@gmail.com</div></div>
+          </a>
+          <a href="https://wa.me/919998841576?text=Hi%20Muzammil%2C%20I%20want%20to%20discuss%20a%20mobile%20app%20project." target="_blank" class="contact-link-item">
+            <span>💬</span><div><div style="font-weight:600;font-size:.82rem;color:var(--text)">WhatsApp</div><div style="font-size:.78rem">+91 99988-41576</div></div>
+          </a>
+          <a href="tel:+919998841576" class="contact-link-item">
+            <span>📞</span><div><div style="font-weight:600;font-size:.82rem;color:var(--text)">Book a Free Call</div><div style="font-size:.78rem">+91 9998841576</div></div>
+          </a>
+          <a href="https://www.linkedin.com/in/muzammil-modan-84a320108" target="_blank" class="contact-link-item">
+            <span>💼</span><div><div style="font-weight:600;font-size:.82rem;color:var(--text)">LinkedIn</div><div style="font-size:.78rem">Muzammil Modan</div></div>
+          </a>
+          <a href="https://github.com/muzammilmodan" target="_blank" class="contact-link-item">
+            <span>⌨</span><div><div style="font-weight:600;font-size:.82rem;color:var(--text)">GitHub</div><div style="font-size:.78rem">github.com/muzammilmodan</div></div>
+          </a>
+          <a href="https://muzammilmodan.super.site" target="_blank" class="contact-link-item">
+            <span>⌨</span><div><div style="font-weight:600;font-size:.82rem;color:var(--text)">Resume</div><div style="font-size:.78rem">github.com/muzammilmodan</div></div>
+          </a>
+        </div>
+      </div>
+      <div class="contact-form fade-up d2">
+        <div class="form-group">
+          <label class="form-label">Your Name</label>
+          <input id="fname" type="text" class="form-input" placeholder="John Doe" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input id="femail" type="email" class="form-input" placeholder="you@company.com" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Project Details</label>
+          <textarea id="fmessage" class="form-textarea" placeholder="Tell me about your app — platform (Android / iOS / both), key features, budget, and timeline..."></textarea>
+        </div>
+        <div class="form-actions">
+          <button class="btn-submit" onclick="handleSubmit()">Send Inquiry →</button>
+          <a href="https://wa.me/919998841576?text=Hi%20Muzammil%2C%20I%20want%20to%20discuss%20a%20mobile%20app%20project." target="_blank" class="btn-wa">💬 WhatsApp Now</a>
+        </div>
+        <a href="tel:+919998841576" class="btn-call">📞 Book Free Call — +91 9998841576</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#hero" class="nav-logo">MM<span>.</span></a>
+      <p>Muzammil Modan — Freelance Mobile App Developer specialising in Android &amp; Flutter. Building high-performance apps for startups and businesses worldwide.</p>
+      <div class="footer-stack">
+        <span class="f-tag">Android</span><span class="f-tag">Flutter</span>
+        <span class="f-tag">Kotlin</span><span class="f-tag">Dart</span>
+        <span class="f-tag">Firebase</span><span class="f-tag">OTT</span>
+        <span class="f-tag">ExoPlayer</span><span class="f-tag">WebRTC</span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#techstack">Tech Stack</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <div class="social-links">
+        <a href="https://github.com/muzammilmodan" target="_blank" class="social-link" title="GitHub">⌨</a>
+        <a href="https://www.linkedin.com/in/muzammil-modan-84a320108" target="_blank" class="social-link" title="LinkedIn">💼</a>
+        <a href="mailto:muzammil.modan786@gmail.com" class="social-link" title="Email">📧</a>
+        <a href="https://wa.me/919998841576" target="_blank" class="social-link" title="WhatsApp">💬</a>
+      </div>
+      <div style="margin-top:1.5rem">
+        <div style="font-size:.78rem;color:var(--text-dim);margin-bottom:.4rem">📍 Ahmedabad, Gujarat, India</div>
+        <div style="font-size:.78rem;color:var(--text-dim);margin-bottom:.4rem">📱 +91 99988-41576</div>
+        <div style="font-size:.78rem;color:var(--text-dim)">✉ muzammil.modan786@gmail.com</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <a href="#">Muzammil Modan</a> · Freelance Mobile App Developer · All rights reserved.</p>
+    <p style="color:var(--text-dim)">Android · Flutter · Firebase · Worldwide 🌍</p>
+  </div>
+</footer>
+
+<div id="toast"></div>
+
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>40);
+},{passive:true});
+
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
+function closeMenu(){document.getElementById('mobileMenu').classList.remove('open')}
+
+function animateCounter(el,target,suffix){
+  let s=0,d=1800,step=16;
+  const inc=target/(d/step);
+  const t=setInterval(()=>{
+    s+=inc;
+    if(s>=target){el.textContent=target+suffix;clearInterval(t);}
+    else el.textContent=Math.floor(s)+suffix;
+  },step);
+}
+
+const fadeObs=new IntersectionObserver(e=>{
+  e.forEach(i=>{if(i.isIntersecting){i.target.classList.add('visible');fadeObs.unobserve(i.target);}});
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-up').forEach(el=>fadeObs.observe(el));
+
+const cntObs=new IntersectionObserver(e=>{
+  e.forEach(i=>{
+    if(i.isIntersecting){
+      i.target.querySelectorAll('[data-target]').forEach(el=>{
+        const t=parseInt(el.getAttribute('data-target'));
+        animateCounter(el,t,t===5?'':'+');
+      });
+      cntObs.unobserve(i.target);
+    }
+  });
+},{threshold:.3});
+const st=document.getElementById('stats');
+if(st) cntObs.observe(st);
+
+function handleSubmit(){
+  const n=document.getElementById('fname').value.trim();
+  const e=document.getElementById('femail').value.trim();
+  const m=document.getElementById('fmessage').value.trim();
+  if(!n||!e||!m){showToast('Please fill in all fields.',false);return;}
+  const s=encodeURIComponent('Mobile App Inquiry — '+n);
+  const b=encodeURIComponent('Hi Muzammil,\n\nName: '+n+'\nEmail: '+e+'\n\nProject:\n'+m+'\n\nLooking forward to your reply.');
+  window.location.href='mailto:muzammil.modan786@gmail.com?subject='+s+'&body='+b;
+  showToast('Opening email client ✓',true);
+}
+
+function showToast(msg,ok=true){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.className=ok?'show success':'show';
+  setTimeout(()=>{t.className='';},3500);
+}
+
+const secs=document.querySelectorAll('section[id]');
+const nls=document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  secs.forEach(s=>{if(window.scrollY>=s.offsetTop-120)cur=s.id;});
+  nls.forEach(a=>{a.style.color=a.getAttribute('href')==='#'+cur?'var(--text)':'';});
+},{passive:true});
+
+if(!('ontouchstart' in window)){
+  const g=document.createElement('div');
+  g.style.cssText='position:fixed;pointer-events:none;z-index:9998;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,0.04)0%,transparent 70%);transform:translate(-50%,-50%);';
+  document.body.appendChild(g);
+  document.addEventListener('mousemove',e=>{g.style.left=e.clientX+'px';g.style.top=e.clientY+'px';});
+}
+</script>
+</body>
+</html>
