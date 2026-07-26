@@ -207,7 +207,7 @@ section{position:relative;z-index:1}
 .project-stack{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}
 .stack-chip{padding:3px 9px;background:rgba(13,148,136,.07);border:1px solid rgba(13,148,136,.2);border-radius:5px;font-size:.7rem;color:var(--teal);font-weight:500}
 .project-actions{display:flex;gap:.5rem;flex-wrap:wrap}
-.btn-pp{padding:.5rem .9rem;border-radius:7px;font-family:var(--font-body);font-size:.75rem;font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:5px;transition:all var(--transition)}
+.btn-pp{padding:.5rem .9rem;border-radius:7px;font-family:var(--font-body);font-size:.75rem;font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:5px;transition:all var(--transition);appearance:none;-webkit-appearance:none;outline:none}
 .btn-pp.play{background:rgba(22,163,74,.1);color:var(--green);border:1px solid rgba(22,163,74,.3)}
 .btn-pp.play:hover{background:rgba(22,163,74,.2);transform:translateY(-1px)}
 .btn-pp.ios{background:rgba(13,148,136,.1);color:var(--teal);border:1px solid rgba(13,148,136,.3)}
@@ -216,6 +216,23 @@ section{position:relative;z-index:1}
 .btn-pp.amazon:hover{background:rgba(202,138,4,.16);transform:translateY(-1px)}
 .btn-pp.dark{background:var(--glass);color:var(--text-muted);border:1px solid var(--glass-border)}
 .btn-pp.dark:hover{border-color:var(--green);color:var(--text)}
+
+/* CASE STUDY MODAL */
+#csOverlay{position:fixed;inset:0;background:rgba(9,20,15,.55);backdrop-filter:blur(4px);z-index:10000;display:none;align-items:center;justify-content:center;padding:5vh 5%}
+#csOverlay.open{display:flex}
+#csModal{background:#fff;border:1px solid var(--glass-border);border-radius:var(--radius-lg);max-width:640px;width:100%;max-height:88vh;overflow-y:auto;padding:2.25rem;position:relative;box-shadow:0 30px 80px rgba(15,30,23,.35)}
+#csModal::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--teal),var(--mint));border-radius:var(--radius-lg) var(--radius-lg) 0 0}
+.cs-close{position:absolute;top:1.1rem;right:1.1rem;width:34px;height:34px;border-radius:50%;background:var(--glass);border:1px solid var(--glass-border);color:var(--text-muted);font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--transition)}
+.cs-close:hover{background:rgba(22,163,74,.12);color:var(--green);border-color:rgba(22,163,74,.3)}
+.cs-tag{display:inline-block;padding:4px 12px;background:rgba(22,163,74,.08);border:1px solid rgba(22,163,74,.22);border-radius:100px;font-size:.7rem;font-weight:600;color:var(--green);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.9rem}
+.cs-title{font-family:var(--font-display);font-size:1.4rem;font-weight:800;letter-spacing:-.02em;color:var(--text);margin-bottom:1.4rem;padding-right:2rem}
+.cs-block{margin-bottom:1.4rem}
+.cs-block:last-of-type{margin-bottom:1.75rem}
+.cs-label{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin-bottom:.5rem}
+.cs-block ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.cs-block li{font-size:.88rem;color:var(--text-muted);line-height:1.6;padding-left:18px;position:relative}
+.cs-block li::before{content:'→';position:absolute;left:0;color:var(--green);font-size:.75rem;top:1px}
+.cs-cta{display:flex;flex-wrap:wrap;gap:.6rem;padding-top:1.25rem;border-top:1px solid var(--glass-border)}
 
 /* RESULTS */
 #results{padding:7rem 0;background:var(--bg2)}
@@ -769,7 +786,7 @@ footer{border-top:1px solid var(--glass-border);padding:3rem 5% 2rem;background:
           <div class="impact-bar"><span class="impact-chip">10K+ Monthly Subscription Users</span><span class="impact-chip">2K+ Daily Users</span><span class="impact-chip">~35% Crash Reduction</span></div>
           <div class="project-stack"><span class="stack-chip">Flutter</span><span class="stack-chip">ExoPlayer</span><span class="stack-chip">Firebase</span><span class="stack-chip">GA4</span><span class="stack-chip">Sentry</span></div>
           <div class="project-actions">
-            <a href="https://wa.me/919998841576?text=Hi%20Muzammil%2C%20I%27d%20like%20to%20see%20the%20detailed%20case%20study%20for%20AltaTV." target="_blank" class="btn-pp study">📄 Case Study</a>
+            <button type="button" class="btn-pp study" onclick="openCaseStudy('altatv')">📄 Case Study</button>
           </div>
         </div>
       </div>
@@ -806,7 +823,7 @@ footer{border-top:1px solid var(--glass-border);padding:3rem 5% 2rem;background:
           <div class="project-actions">
             <a href="https://play.google.com/store/apps/details?id=com.altaplay&hl=en_IN" target="_blank" class="btn-pp play">▶ Play Store</a>
             <a href="https://apps.apple.com/in/app/altaplays/id6755672466" target="_blank" class="btn-pp ios"> App Store</a>
-            <a href="https://wa.me/919998841576?text=Hi%20Muzammil%2C%20I%27d%20like%20to%20see%20the%20detailed%20case%20study%20for%20AltaPlay." target="_blank" class="btn-pp study">📄 Case Study</a>
+            <button type="button" class="btn-pp study" onclick="openCaseStudy('altaplay')">📄 Case Study</button>
           </div>
         </div>
       </div>
@@ -825,7 +842,7 @@ footer{border-top:1px solid var(--glass-border);padding:3rem 5% 2rem;background:
           <div class="project-actions">
             <a href="https://play.google.com/store/apps/details?id=com.altaplay.receiver&hl=en_IN" target="_blank" class="btn-pp play">▶ Play Store</a>
             <a href="https://www.amazon.in/dp/B0G6DWGL6J/" target="_blank" class="btn-pp amazon">Amazon</a>
-            <a href="https://wa.me/919998841576?text=Hi%20Muzammil%2C%20I%27d%20like%20to%20see%20the%20detailed%20case%20study%20for%20AltaPlay%20Receiver." target="_blank" class="btn-pp study">📄 Case Study</a>
+            <button type="button" class="btn-pp study" onclick="openCaseStudy('altaplayreceiver')">📄 Case Study</button>
           </div>
         </div>
       </div>
@@ -844,7 +861,7 @@ footer{border-top:1px solid var(--glass-border);padding:3rem 5% 2rem;background:
           <div class="project-actions">
             <a href="https://play.google.com/store/apps/details?id=com.mission.gps" target="_blank" class="btn-pp play">▶ Play Store</a>
             <a href="https://apps.apple.com/in/app/mission-gps/id1521873888" target="_blank" class="btn-pp ios"> App Store</a>
-            <a href="https://wa.me/919998841576?text=Hi%20Muzammil%2C%20I%27d%20like%20to%20see%20the%20detailed%20case%20study%20for%20Mission%20GPS." target="_blank" class="btn-pp study">📄 Case Study</a>
+            <button type="button" class="btn-pp study" onclick="openCaseStudy('missiongps')">📄 Case Study</button>
           </div>
         </div>
       </div>
@@ -863,7 +880,7 @@ footer{border-top:1px solid var(--glass-border);padding:3rem 5% 2rem;background:
           <div class="project-actions">
             <a href="https://play.google.com/store/apps/details?id=com.noosomapp&hl=en_IN" target="_blank" class="btn-pp play">▶ Play Store</a>
             <a href="https://apps.apple.com/in/app/noosom-diary-your-life-story/id1664062691" target="_blank" class="btn-pp ios"> App Store</a>
-            <a href="https://wa.me/919998841576?text=Hi%20Muzammil%2C%20I%27d%20like%20to%20see%20the%20detailed%20case%20study%20for%20Noosom%20Diary." target="_blank" class="btn-pp study">📄 Case Study</a>
+            <button type="button" class="btn-pp study" onclick="openCaseStudy('noosom')">📄 Case Study</button>
           </div>
         </div>
       </div>
@@ -900,7 +917,7 @@ footer{border-top:1px solid var(--glass-border);padding:3rem 5% 2rem;background:
           <div class="project-actions">
             <a href="https://play.google.com/store/apps/details?id=com.askurdr.doctors" 
             target="_blank" class="btn-pp play">▶ Play Store</a>
-            <a href="https://wa.me/919998841576?text=Hi%20Muzammil%2C%20I%27d%20like%20to%20see%20the%20detailed%20case%20study%20for%20AskUrDr." target="_blank" class="btn-pp study">📄 Case Study</a>
+            <button type="button" class="btn-pp study" onclick="openCaseStudy('askurdr')">📄 Case Study</button>
           </div>
         </div>
       </div>
@@ -1119,6 +1136,13 @@ footer{border-top:1px solid var(--glass-border);padding:3rem 5% 2rem;background:
   </div>
 </footer>
 
+<div id="csOverlay" onclick="if(event.target===this)closeCaseStudy()">
+  <div id="csModal" role="dialog" aria-modal="true">
+    <button type="button" class="cs-close" onclick="closeCaseStudy()" aria-label="Close">✕</button>
+    <div id="csContent"></div>
+  </div>
+</div>
+
 <div id="toast"></div>
 
 <script>
@@ -1128,6 +1152,133 @@ window.addEventListener('scroll',()=>{
 
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
 function closeMenu(){document.getElementById('mobileMenu').classList.remove('open')}
+
+const caseStudies = {
+  altatv: {
+    tag: 'OTT · Streaming · Smart TV',
+    title: 'AltaTV — Fixing Playback Across Fragmented TV Hardware',
+    blocks: [
+      { label: 'The Problem', items: [
+        'ExoPlayer behaved inconsistently across the wide range of Smart TVs and streaming boxes used by AltaTV\'s audience — some devices simply failed to play video.',
+        'A subset of TVs didn\'t support the resolution being requested, causing playback to stall or fail outright instead of degrading gracefully.'
+      ]},
+      { label: 'The Fix', items: [
+        'Built an automatic resolution fallback system: when a device rejects a stream, the player detects it and steps down to a supported resolution in real time instead of failing.',
+        'Rolled out proactive crash and bug monitoring through Sentry — every playback error and crash is tracked, triaged, and traced back to its root cause quickly rather than relying on user reports.',
+        'Combined the two: fallback logic keeps playback alive in the moment, while Sentry data drives the next round of device-specific fixes.'
+      ]},
+      { label: 'Result', items: [
+        '~35% reduction in crash rate after rollout.',
+        'Consistent playback across Android TV, Fire TV, and other fragmented TV hardware.'
+      ]}
+    ]
+  },
+  altaplay: {
+    tag: 'Casting SDK · JavaScript · Flutter · AirPlay',
+    title: 'AltaPlay — A Casting SDK That Talks to Every Screen',
+    blocks: [
+      { label: 'JS ⇄ Flutter Bridge', items: [
+        'The JavaScript SDK embedded on any website communicates directly with native Flutter functions through a WebView/postMessage bridge — casting commands and status updates flow cleanly in both directions.',
+        'Designed so any web domain can drop in the SDK with zero native code of their own.'
+      ]},
+      { label: 'LG TV Casting Fix', items: [
+        'LG\'s WebOS DLNA implementation behaves differently from the DLNA standard, which broke casting on LG hardware out of the box.',
+        'Solved with LG-specific timing and polling logic, plus URL-validation handling tailored to how LG WebOS actually processes cast requests — bringing LG casting to the same reliability as other platforms.'
+      ]},
+      { label: 'Native AirPlay Integration', items: [
+        'Added native AirPlay support so iOS users can cast straight from the app to Apple TV.',
+        'Built through a custom Flutter-to-iOS native bridge that talks to Apple\'s AirPlay APIs directly, rather than relying on generic cross-platform casting libraries.'
+      ]}
+    ]
+  },
+  altaplayreceiver: {
+    tag: 'Smart TV · Android TV · Fire TV · Samsung · LG',
+    title: 'AltaPlay Receiver — One Codebase, Five TV Platforms',
+    blocks: [
+      { label: 'The Challenge', items: [
+        'AltaPlay needed a receiver app running natively on Android TV, Google TV, Fire TV, Samsung Tizen, and LG WebOS — five platforms with very different app models.',
+        'Samsung and LG TVs don\'t run Android at all; they only accept web-based apps (HTML/CSS/JS), which rules out a standard native build.'
+      ]},
+      { label: 'The Approach', items: [
+        'Built the core receiver once in Flutter for the Android-based platforms (Android TV, Google TV, Fire TV).',
+        'Compiled the same Flutter codebase to a web build, then adapted that output into the HTML/CSS/JS format each platform\'s store requires — Samsung Seller Console and LG Content Store both expect a web app package, not an APK.',
+        'Handled the platform-specific quirks in that conversion (rendering, input handling, casting session bridging) so the receiving experience stays consistent everywhere.'
+      ]},
+      { label: 'Result', items: [
+        'A single receiver experience shipped across five Smart TV ecosystems from one shared codebase instead of five separate apps.'
+      ]}
+    ]
+  },
+  missiongps: {
+    tag: 'GPS Tracking · Real-Time · Transit',
+    title: 'Mission GPS — Live Tracking That Survives App Kill',
+    blocks: [
+      { label: 'The Requirement', items: [
+        'Riders needed uninterrupted live tracking of their driver — even if the driver\'s app was backgrounded, minimized, or killed entirely by the OS.'
+      ]},
+      { label: 'The Solution', items: [
+        'Implemented continuous background location tracking on the driver side, so location keeps updating regardless of the app\'s foreground state.',
+        'Wired that stream into the rider\'s map in real time via WebSocket, so the live position never freezes or goes stale mid-trip.'
+      ]},
+      { label: 'Result', items: [
+        'Reliable, continuous live tracking used across 1,000+ downloads, holding up under real-world background/kill scenarios.'
+      ]}
+    ]
+  },
+  noosom: {
+    tag: 'Privacy · Journaling · AES Encryption',
+    title: 'Noosom Diary — Bulk Media Uploads Without Blocking the App',
+    blocks: [
+      { label: 'Feature: File Manager', items: [
+        'Built an integrated file manager inside the app so users can browse and organize their journal media directly.'
+      ]},
+      { label: 'Feature: Bulk Chunked Uploads', items: [
+        'Users can select and upload up to 30 images or videos in a single batch.',
+        'Uploads are broken into chunks and pushed through a resumable, chunk-wise pipeline instead of one large blocking request.',
+        'The entire upload runs on a background service — after tapping upload, the user can immediately move on to any other screen in the app without the UI freezing or waiting for the batch to finish.'
+      ]}
+    ]
+  },
+  askurdr: {
+    tag: 'Healthcare · Telemedicine · Android',
+    title: 'AskUrDr — From Booking to Paid Consultation Call',
+    blocks: [
+      { label: 'The Flow', items: [
+        'Patients book an appointment with a doctor directly from their phone, no separate scheduling step outside the app.',
+        'After the consultation fee is paid, the app connects patient and doctor directly for the consultation.'
+      ]},
+      { label: 'Calling Integration', items: [
+        'Audio and video calling built on top of Twilio and Sinch, so the consultation happens inside the app immediately after payment — no external call app, no manual coordination.'
+      ]}
+    ]
+  }
+};
+
+function openCaseStudy(id){
+  const cs = caseStudies[id];
+  if(!cs) return;
+  const wa = 'https://wa.me/919998841576?text=' + encodeURIComponent('Hi Muzammil, I saw the ' + cs.title.split('—')[0].trim() + ' case study and want to discuss a similar project.');
+  let html = '<div class="cs-tag">' + cs.tag + '</div>';
+  html += '<div class="cs-title">' + cs.title + '</div>';
+  cs.blocks.forEach(b=>{
+    html += '<div class="cs-block"><div class="cs-label">' + b.label + '</div><ul>';
+    b.items.forEach(it=>{ html += '<li>' + it + '</li>'; });
+    html += '</ul></div>';
+  });
+  html += '<div class="cs-cta"><a href="' + wa + '" target="_blank" class="btn-pp play">💬 Discuss a Similar Project</a><a href="mailto:muzammil.modan2410@gmail.com" class="btn-pp dark">📧 Email Me</a></div>';
+  document.getElementById('csContent').innerHTML = html;
+  document.getElementById('csOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCaseStudy(){
+  document.getElementById('csOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e=>{
+  if(e.key === 'Escape') closeCaseStudy();
+});
 
 function animateCounter(el,target,suffix){
   let s=0,d=1800,step=16;
